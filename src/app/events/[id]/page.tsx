@@ -1,5 +1,6 @@
-"use client"; //<- this is important, because whe are using a hook
-//so we need to inform its a client side
+// this is important, because we are using a hook do we need to inform its a client side
+"use client"; 
+
 import { useParams } from "next/navigation";
 
 export default function EventInfo() {
