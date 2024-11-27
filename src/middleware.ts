@@ -1,10 +1,16 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-const protectedRoutes = ["/plataform"];
+const protectedRoutes = ["/platform"];
 const publicRoutes = ["/login", "/register"];
 
+const disableMiddleware = true;
+
 export function middleware(request: NextRequest) {
+  if (disableMiddleware) {
+    return NextResponse.next();
+  }
+
   // URL ACESSED
   const { pathname } = request.nextUrl;
   // USER SESSION
@@ -39,4 +45,3 @@ export function middleware(request: NextRequest) {
   // REDIRECT TO LOGIN IF URL IS INVALID
   return NextResponse.redirect(new URL("/login", request.url));
 }
-
