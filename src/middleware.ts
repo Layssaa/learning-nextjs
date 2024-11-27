@@ -39,7 +39,7 @@ export function middleware(request: NextRequest) {
   }
 
   if (isPublicRouter && userId) {
-    return NextResponse.redirect(new URL("/plataform", request.url));
+    return NextResponse.redirect(new URL("/platform", request.url));
   }
 
   // REDIRECT TO LOGIN IF URL IS INVALID
