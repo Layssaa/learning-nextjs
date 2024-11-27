@@ -4,7 +4,7 @@ export default function Login() {
   return (
     <div>
       <p>login</p>
-      <Link href="/plataform">Entrar</Link>
+      <Link href="/platform">Entrar</Link>
     </div>
   );
 }
